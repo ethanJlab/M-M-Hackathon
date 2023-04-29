@@ -10,7 +10,9 @@ function App() {
     <>
     
    {/* <Relatedness></Relatedness> */}
-    <CaseList/>
+    <div style={{height:"200px"}}>
+      <CaseList cases={[1, 2, 3]}/>
+    </div>
     </>
   );
 }

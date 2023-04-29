@@ -6,24 +6,55 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import InboxIcon from '@mui/icons-material/Inbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
 import Paper from '@mui/material/Paper';
+import DescriptionIcon from '@mui/icons-material/Description';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
+interface CaseListProps {
+    cases : any[];
+}
 
-export function CaseList() {
-  return (
-    <Paper sx={{ width: 320, maxWidth: '100%' }}>
-        <List>
+export function CaseList( { cases } : CaseListProps) {
+
+  let caseItems = cases.map((caseItem) =>
+    <>
         <ListItem disablePadding>
-        <ListItemButton>
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Inbox" />
+            <ListItemButton>
+                <ListItemIcon>
+                    <DescriptionIcon />
+                </ListItemIcon>
+                <ListItemText primary="Inbox" />
             </ListItemButton>
-
         </ListItem>
+        <Divider/>
+    </>
+
+    
+    );
+
+  return (
+    <Paper sx={{ width: 320, maxWidth: '100%', height:"100%", overflow: 'auto'}}>
+        <List>
+            <ListItem disablePadding>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <DescriptionIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Inbox" />
+                </ListItemButton>
+            </ListItem>
+            <Divider />
+            <ListItem disablePadding>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <PictureAsPdfIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Inbox" />
+                </ListItemButton>
+            </ListItem>
+            <Divider />
+
+            {caseItems}
         </List>
     </Paper>
   );
