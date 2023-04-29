@@ -4,6 +4,7 @@ import  * as dotenv from 'dotenv';
 dotenv.config();
 import { Configuration, OpenAIApi } from 'openai';
 import weaviate from 'weaviate-ts-client';
+import { generateRequest } from '../gptq.js';
 
 var envVariables = process.env;
 const {
@@ -50,11 +51,11 @@ vectorRouter.post('/create', async function (req, res, next) {
 
 // endpoint to get query a vector
 vectorRouter.post('/query', async function (req, res, next) {
-    var query = req.body.content;
+    var query = JSON.stringify(req.body.content);
     var keywords;
-
+    console.log("Here Babe")
     // hit the openai endpoint to ask to generate keywords based on the query
-    fetch('http://localhost:9000/openAI/inputPrompt', {
+    await fetch('http://localhost:9000/openAI/inputPrompt', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -64,37 +65,47 @@ vectorRouter.post('/query', async function (req, res, next) {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
-            keywords = data.content;
-           // console.log(keywords);
+            
+            keywords = JSON.stringify(data.content);
+           
         })
         .catch((error) => {
             console.error('Error:', error);
         });
 
-        //console.log("Keywoards: "+keywords);
-       // console.log("query: " + query);
+        
+       
+       const parsedResponse = JSON.parse(query);
+        const parsedKeywords = JSON.parse(keywords);
+        
+       
+    //    const personality = "Saul goodman";
 
-        client.graphql
-        .get()
-        .withClassName('Document')
-        .withFields('content')
-        .withNearText({
-            concepts: [keywords]
-        })
-        .withGenerate({
-            groupedTask: query,
-        })
-        .withLimit(1)
-        .do()
-        .then(res => {
-            // console.log(JSON.stringify(res))
-            console.log(res.data.Get.Document[0]._additional.generate.groupedResult)
-            res.send(res.data.Get.Document[0]._additional.generate.groupedResult);
-        })
-        .catch(err => {
-            console.error(err)
-        });
+       
+       const userAnswer = await generateRequest(parsedResponse,keywords)
+       
+       res.send(userAnswer);
+
+        // client.graphql
+        // .get()
+        // .withClassName('Document')
+        // .withFields('content')
+        // .withNearText({
+        //     concepts: [keywords]
+        // })
+        // .withGenerate({
+        //     groupedTask: query,
+        // })
+        // .withLimit(3)
+        // .do()
+        // .then(res => {
+        //     // console.log(JSON.stringify(res))
+        //     console.log(res.data.Get.Document[0]._additional.generate.groupedResult)
+        //     res.send(res.data.Get.Document[0]._additional.generate.groupedResult);
+        // })
+        // .catch(err => {
+        //     console.error(err)
+        // });
 
 });
 
