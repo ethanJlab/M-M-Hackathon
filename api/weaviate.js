@@ -1,5 +1,3 @@
-
-
 import weaviate from 'weaviate-ts-client';
 import  * as dotenv from 'dotenv';
 dotenv.config();
