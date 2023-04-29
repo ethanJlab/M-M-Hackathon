@@ -1,5 +1,9 @@
 # M-M-Hackathon
 
+# Running the api app
+Navigate to the api directory <br>
+run ```npm i ``` and then ``` npm start ```
+
 # OpenAI API endpoints
 
 - "inputPrompt" enpoint is used for general GPT inputs
