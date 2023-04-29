@@ -12,7 +12,7 @@ import axios from "axios";
 
 function App() {
 
-  const baseURL = "https://f728-132-170-212-17.ngrok-free.app";
+  const baseURL = "http://localhost:9000";
   useEffect(() => {
     console.log("Fetching all files");
     // TODO: fetch all case files here
