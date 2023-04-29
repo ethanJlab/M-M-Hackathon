@@ -15,7 +15,7 @@ const client = weaviate.client({
 });
 
 
-const generateTask = 'What is the document concerning Donvan';
+const generateTask = '';
 
 var keywords = "Accident, Donvan, Date, Incident, Crash, Injury, Report, Police, Statement, Witness";
 
@@ -29,7 +29,7 @@ client.graphql
   .withGenerate({
     groupedTask: generateTask,
   })
-  .withLimit(1)
+  .withLimit(3)
   .do()
   .then(res => {
     // console.log(JSON.stringify(res))
