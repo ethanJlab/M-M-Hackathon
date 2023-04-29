@@ -50,11 +50,11 @@ vectorRouter.post('/create', async function (req, res, next) {
 
 // endpoint to get query a vector
 vectorRouter.post('/query', async function (req, res, next) {
-    var query = req.body.content;
+    var query = JSON.stringify(req.body.content);
     var keywords;
 
     // hit the openai endpoint to ask to generate keywords based on the query
-    fetch('http://localhost:9000/openAI/inputPrompt', {
+    await fetch('http://localhost:9000/openAI/inputPrompt', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -65,15 +65,15 @@ vectorRouter.post('/query', async function (req, res, next) {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
-            keywords = data.content;
-           // console.log(keywords);
+            keywords = JSON.stringify(data.content);
+            console.log("Studd" + data.content);
         })
         .catch((error) => {
             console.error('Error:', error);
         });
 
-        //console.log("Keywoards: "+keywords);
-       // console.log("query: " + query);
+        console.log("Keywoards: "+keywords);
+        console.log("query: " + query);
 
         client.graphql
         .get()
@@ -95,6 +95,7 @@ vectorRouter.post('/query', async function (req, res, next) {
         .catch(err => {
             console.error(err)
         });
+        
 
 });
 
