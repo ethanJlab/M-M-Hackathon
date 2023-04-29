@@ -12,7 +12,7 @@ const {
 } = envVariables;
 
 const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "",
 });
 const openai = new OpenAIApi(configuration);
 const model = "gpt-3.5-turbo";
