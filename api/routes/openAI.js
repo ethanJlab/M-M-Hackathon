@@ -1,6 +1,6 @@
 import express from 'express';
 export const openAIRouter = express.Router();
-import dotenv from 'dotenv';
+import  * as dotenv from 'dotenv';
 dotenv.config();
 import { Configuration, OpenAIApi } from 'openai';
 
@@ -12,7 +12,7 @@ const {
 } = envVariables;
 
 const configuration = new Configuration({
-    apiKey: "",
+    apiKey: OPENAIKEY,
 });
 const openai = new OpenAIApi(configuration);
 const model = "gpt-3.5-turbo";
@@ -24,6 +24,7 @@ openAIRouter.post('/', async function (req, res, next) {
         model : model,
         messages: [{role: "system", content : "You are a helpful chatbot."}]
     });
+    console.log(process.env)
     res.send(response.data.choices[0].message);
     
 });
@@ -35,7 +36,7 @@ openAIRouter.post('/inputPrompt', async function (req, res, next) {
     var input = req.body.input;
     var response = await openai.createChatCompletion({
         model : model,
-        messages:[{role: "system", content : prompt}, {role: "user", content : "Hello, how are you?"}]
+        messages:[{role: "system", content : prompt}, {role: "system", content : input}]
     });
     res.send(response.data.choices[0].message);
 });
