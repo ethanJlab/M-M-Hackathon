@@ -53,7 +53,7 @@ vectorRouter.post('/create', async function (req, res, next) {
 vectorRouter.post('/query', async function (req, res, next) {
     var query = JSON.stringify(req.body.content);
     var keywords;
-    console.log("Here Babe")
+    //console.log("Here Babe")
     // hit the openai endpoint to ask to generate keywords based on the query
     await fetch('http://localhost:9000/openAI/inputPrompt', {
         method: 'POST',
@@ -83,8 +83,14 @@ vectorRouter.post('/query', async function (req, res, next) {
 
        
        const userAnswer = await generateRequest(parsedResponse,keywords)
+
+       if(userAnswer == null){
+            res.send("No relevant answer found, please add more relevant data.");
+        }else{
+            res.send(userAnswer);
+        }
+
        
-       res.send(userAnswer);
 
         // client.graphql
         // .get()
