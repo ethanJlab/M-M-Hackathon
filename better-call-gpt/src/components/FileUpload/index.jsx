@@ -23,39 +23,35 @@ export function FileUpload() {
   }, [file])
   
   return (
-    <div  style={{width:"100%", height:"100px", '&:hover': {
-        backgroundColor: 'inherit',
-    },
-    '&:active': {
-        backgroundColor: 'inherit',
-    },
-    '&:focus': {
-        backgroundColor: 'inherit',
-    },}}> 
-        {/* <FancyButton/> */}
-        <FileUploader handleChange={handleChange} name="file" types={fileTypes} hoverTitle=""
-        dropMessageStyle = {
-            {display:"none"}
-        }
+    <div style={{
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        paddingLeft:"8px",
+        paddingRight:"8px",
+        paddingTop:"8px",
+        height: '100%',
+        width:"100%"
+    }}>
+    <FileUploader
+        handleChange={handleChange}
+        name="file"
+        types={fileTypes}
+        hoverTitle=""
+        dropMessageStyle={{ display: "none" }}
         children={
             <Button
                 style={{
                     width: '100%',
-                    height: '100px',
-                    '&:hover': {
-                        backgroundColor: 'inherit',
-                    },
-                    '&:active': {
-                        backgroundColor: 'inherit',
-                    },
-                    '&:focus': {
-                        backgroundColor: 'inherit',
-                    },
+                    height: '50px',
+                    borderRadius: "10px",
+                    border: "2px solid grey",
                 }}
             >
-                <AddIcon />
+                <AddIcon /> Upload new File
             </Button>
-        }/>
+        }
+    />
     </div>
   );
 }
