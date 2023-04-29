@@ -1,4 +1,5 @@
 import express from 'express';
+import fs from 'fs';
 export const openAIRouter = express.Router();
 import  * as dotenv from 'dotenv';
 dotenv.config();
@@ -66,6 +67,14 @@ openAIRouter.post('/monkeyMode', async function (req, res, next) {
         messages: [{role: "system", content : "You are a helpful chatbot. You only respond in monkey banana mode."}]
     });
     res.send(response.data.choices[0].message);
+});
+
+//this enpoint takes in an audio file and outputs a text
+openAIRouter.post('/audioToText', async function (req, res, next) {
+    var audio = req.body.content;
+    audio = fs.createReadStream(audio);
+    var response = await openai.createTranscription(audio,"whisper-1");
+    res.send(response.data.text);
 });
 
 // rout that takes a 
