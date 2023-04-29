@@ -1,6 +1,8 @@
 var createError = require('http-errors');
 var express = require('express');
+var router = express.Router();
 var path = require('path');
+var port = 9000;
 
 var openAIRouter = require('./routes/openAI');
 
@@ -11,9 +13,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/openAI', openAIRouter);
 
-module.exports.app;
+const server = app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+    })
+
+module.exports = router;
