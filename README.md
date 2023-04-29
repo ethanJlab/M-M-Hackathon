@@ -52,4 +52,9 @@ run ```npm i ``` and then ``` npm start ```
         0.00250483
         ]
         }
-
+-----------------------------
+## get all
+- gets all documents in the DB
+- hosted at localhost:8080/vector/getAll
+- no input
+- outputs an array of docs
