@@ -10,27 +10,28 @@ import Paper from '@mui/material/Paper';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
-interface CaseListProps {
-    cases : any[];
-}
+export function CaseList( cases ) {
+    let caseItems
+    if(Array.isArray(cases) )
+    {
 
-export function CaseList( { cases } : CaseListProps) {
-
-  let caseItems = cases.map((caseItem) =>
-    <>
-        <ListItem disablePadding>
-            <ListItemButton>
-                <ListItemIcon>
-                    <DescriptionIcon />
-                </ListItemIcon>
-                <ListItemText primary="Inbox" />
-            </ListItemButton>
-        </ListItem>
-        <Divider/>
-    </>
+        caseItems = cases.map((caseItem) => {
+            return (
+                <>
+                    <ListItem disablePadding>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <DescriptionIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Inbox" />
+                </ListItemButton>
+            </ListItem>
+                </>
+            )
+        })
+    }
 
     
-    );
 
   return (
     <Paper sx={{ width: 320, maxWidth: '100%', height:"100%", overflow: 'auto'}}>
