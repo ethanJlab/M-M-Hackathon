@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,7 @@
     "express": "^4.18.2",
     "http-errors": "^2.0.0",
     "openai": "^3.2.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "weaviate-ts-client": "^1.1.0"
   }
 }
