@@ -5,6 +5,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import MicIcon from '@mui/icons-material/Mic';
+import StopIcon from '@mui/icons-material/Stop';
 
 export function VoiceRecordDialog() {
   const [open, setOpen] = React.useState(false);
@@ -33,7 +35,10 @@ export function VoiceRecordDialog() {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description" style={{textAlign:"center"}}>
-            Start Recording
+              <Button style={{height:"100px", width:"100px"}}>
+                {/* <MicIcon style={{height:"100px", width:"100px"}}/> */}
+                <StopIcon style={{height:"100px", width:"100px"}}/> 
+              </Button>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

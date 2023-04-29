@@ -47,8 +47,8 @@ export function CaseList( props ) {
     }, [props.cases])
 
   return (
-    <Paper sx={{ width: "100%", height:"100%", maxHeight:"80vh", overflow: 'auto'}}>
-        <List>
+    <Paper  sx={{ width: "100%", height:"100%", maxHeight:"80vh", overflow: 'auto'}}>
+        <List className='bg-gray-200'>
             {caseItems}
 
             {/* TODO: use below when files are mapped to a case

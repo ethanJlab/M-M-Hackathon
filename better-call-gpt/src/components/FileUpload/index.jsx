@@ -23,7 +23,7 @@ export function FileUpload() {
   }, [file])
   
   return (
-    <div style={{
+    <div className="bg-gradient-to-t from-gray-200" style={{
         // display: 'flex',
         // justifyContent: 'center',
         // alignItems: 'center',
@@ -34,6 +34,7 @@ export function FileUpload() {
         width:"100%"
     }}>
     <FileUploader
+      
         handleChange={handleChange}
         name="file"
         types={fileTypes}
@@ -41,11 +42,13 @@ export function FileUpload() {
         dropMessageStyle={{ display: "none" }}
         children={
             <Button
+          
                 style={{
                     width: '100%',
                     height: '50px',
                     borderRadius: "10px",
                     border: "2px solid grey",
+                    color:"#1f2937"
                 }}
             >
                 <AddIcon /> Upload new File

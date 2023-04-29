@@ -55,15 +55,11 @@ export function Chat()
     }, [sendTextBubbles]);
 
     return (
-        <div className='w-3/4 h-80 bg-gray-400 content-end rounded'>
+        <div className='w-3/4 h-96 bg-gradient-to-b from-BCGPTred to-BCGPTyellow content-end rounded'>
             {recieveTextBubbles}
 
             <div className="flex justify-center content-center w-full h-12 rounded-lg bg-white">
-                {/* <form onSubmit={handleTextSubmit} className='w-11/12'>
-                    <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder='Ask a question about the case!'
-                        className="w-full h-4/5 rounded-xl"/>
-                    <button type='submit'><SendIcon/></button>
-                </form> */}
+            
                 <TextField placeholder="Ask a question about the case!" value={text} className='w-full' onChange={(e) => setText(e.target.value)}
                     onKeyDown={(event) => {
                         if (event.key === "Enter") {
