@@ -6,32 +6,32 @@ run ```npm i ``` and then ``` npm start ```
 
 # OpenAI API endpoints
 
-### inputPrompt
+### inputPrompt (post)
 - "inputPrompt" enpoint is used for general GPT inputs
 - hosted at localhost:9000/openAI/inputPrompt
 - input: { prompt : "The general instruction for the bot to follow", input:"The input file or text for the bot to respond to"}
 - output: { role: "role of bot", content : "main response from the api"}
 ----------------------------
-### Client Help
+### Client Help (post)
 - "clientHelp" endpoint takes a file and intrepets it for the client
 - hosted at localhost:9000/openAI/clientHelp
 - input : {input:"input file"}
 - output: { role: "role of bot", content : "main response from the api"}
 ----------------------------------------------------------
-### lawyer Help
+### lawyer Help (post)
 - "lawyerHelp" endpoint takes a file and intrepets it for a lawyer
 - hosted at localhost:9000/openAI/lawyerHelp
 - input : {input:"input file"}
 - output: { role: "role of bot", content : "main response from the api"}
 ----------------------------------------------------------
-### Monkey Mode
+### Monkey Mode (post)
 - "monkeyMode"
 - hosted at localhost:9000/openAI/monkeyMode
 ------------------------------------------------
 
 # Vector DB endpoints
 
-## add doc
+## add doc (post)
 - used to add documents to the database
 - hosted at localhost:8080/vector/create
 - input{
@@ -53,7 +53,7 @@ run ```npm i ``` and then ``` npm start ```
         ]
         }
 -----------------------------
-## get all
+## get all (get)
 - gets all documents in the DB
 - hosted at localhost:8080/vector/getAll
 - no input

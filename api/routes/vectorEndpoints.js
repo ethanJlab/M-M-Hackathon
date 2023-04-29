@@ -52,7 +52,7 @@ vectorRouter.post('/create', async function (req, res, next) {
 
 // get all documents
 vectorRouter.get('/getAll', async function (req, res, next) {
-    var getAllEndpoint = baseUrl + "/v1/objects?class=Documents&";
+    var getAllEndpoint = baseUrl + "/v1/objects?class=Document&";
     fetch(getAllEndpoint, {
         method: 'GET',
         headers: {
