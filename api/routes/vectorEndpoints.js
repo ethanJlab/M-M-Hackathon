@@ -28,7 +28,7 @@ var baseUrl = "http://localhost:8080";
 }
 */
 vectorRouter.post('/create', async function (req, res, next) {
-    var createEndpoint = baseUrl + "/v1/objects";
+    var createEndpoint = baseUrl + "/v1/objects/";
     let data = req.body;
     console.log(data);
 
@@ -49,6 +49,23 @@ vectorRouter.post('/create', async function (req, res, next) {
 
     
 });
+
+// get all documents
+vectorRouter.get('/getAll', async function (req, res, next) {
+    var getAllEndpoint = baseUrl + "/v1/objects?class=Documents&";
+    fetch(getAllEndpoint, {
+        method: 'GET',
+        headers: {
+            'X-OpenAi-Api-Key': OPENAIKEY
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        res.send(data);
+    })
+});
+
 
 export default vectorRouter;
     
