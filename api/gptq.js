@@ -15,9 +15,9 @@ const client = weaviate.client({
 });
 
 
-const generateTask = '';
+const generateTask = 'What do the documents concerning an Andrew East Contain and what are some titles of these documents';
 
-var keywords = "Accident, Donvan, Date, Incident, Crash, Injury, Report, Police, Statement, Witness";
+var keywords = "" + generateTask;
 
 client.graphql
   .get()
@@ -34,7 +34,7 @@ client.graphql
   .then(res => {
     // console.log(JSON.stringify(res))
     console.log(res.data.Get.Document[0]._additional.generate.groupedResult)
-    
+    // console.log(res.data.Get.Document[0])
   })
   .catch(err => {
     console.error(err)
