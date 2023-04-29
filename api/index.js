@@ -12,10 +12,6 @@ var port = 9000;
 // routes
 import openAIRouter from './routes/openAI.js';
 
-
-
-
-
 app.set('views', path.join(import.meta.url, '..', 'views'));
 app.set('view engine', 'jade');
 
