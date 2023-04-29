@@ -29,7 +29,7 @@ run ```npm i ``` and then ``` npm start ```
 - hosted at localhost:9000/openAI/monkeyMode
 ------------------------------------------------
 
-# Vector DB enpoints
+# Vector DB endpoints
 
 ## add doc
 - used to add documents to the database
