@@ -45,10 +45,59 @@ vectorRouter.post('/create', async function (req, res, next) {
     .then(data => {
         console.log('Success:', data);
         res.send(data);
-    })
-
-    
+    })    
 });
+
+// endpoint to get query a vector
+vectorRouter.post('/query', async function (req, res, next) {
+    var query = req.body.content;
+    var keywords;
+
+    // hit the openai endpoint to ask to generate keywords based on the query
+    fetch('http://localhost:9000/openAI/inputPrompt', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        body :JSON.stringify({input: query, prompt:"Based on this query, generate keywords in one line."}) 
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            keywords = data.content;
+           // console.log(keywords);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+        //console.log("Keywoards: "+keywords);
+       // console.log("query: " + query);
+
+        client.graphql
+        .get()
+        .withClassName('Document')
+        .withFields('content')
+        .withNearText({
+            concepts: [keywords]
+        })
+        .withGenerate({
+            groupedTask: query,
+        })
+        .withLimit(1)
+        .do()
+        .then(res => {
+            // console.log(JSON.stringify(res))
+            console.log(res.data.Get.Document[0]._additional.generate.groupedResult)
+            res.send(res.data.Get.Document[0]._additional.generate.groupedResult);
+        })
+        .catch(err => {
+            console.error(err)
+        });
+
+});
+
 
 export default vectorRouter;
     
