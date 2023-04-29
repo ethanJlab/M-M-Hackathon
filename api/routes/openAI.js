@@ -1,20 +1,24 @@
-var express = require('express');
-var router = express.Router();
-var dotenv = require('dotenv').config;
-var { Configuration, OpenAIApi } = require('openai');
+import express from 'express';
+export const openAIRouter = express.Router();
+import dotenv from 'dotenv';
+dotenv.config();
+import { Configuration, OpenAIApi } from 'openai';
+
+
+
 var envVariables = process.env;
 const {
     OPENAIKEY
 } = envVariables;
 
 const configuration = new Configuration({
-    apiKey: "api key here",
+    apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 const model = "gpt-3.5-turbo";
 
 // the base enpoint, uses a general prompt 
-router.post('/', async function (req, res, next) {    
+openAIRouter.post('/', async function (req, res, next) {    
     
     var response = await openai.createChatCompletion({
         model : model,
@@ -26,7 +30,7 @@ router.post('/', async function (req, res, next) {
 
 // this endpoint uses a prompt that puts the chatbot in monkey banana mode
 // must include the prompt in the request body and the input
-router.post('/inputPrompt', async function (req, res, next) {
+openAIRouter.post('/inputPrompt', async function (req, res, next) {
     var prompt = req.body.prompt;
     var input = req.body.input;
     var response = await openai.createChatCompletion({
@@ -37,7 +41,7 @@ router.post('/inputPrompt', async function (req, res, next) {
 });
 
 // this enpoint is used to translate the input text in a way a client can understand
-router.post('/clientHelp', async function (req, res, next) {
+openAIRouter.post('/clientHelp', async function (req, res, next) {
     var input = req.body.input;
     var response = await openai.createChatCompletion({
         model : model,
@@ -47,7 +51,7 @@ router.post('/clientHelp', async function (req, res, next) {
 });
 
 // this endpoint is used to translate the input text in a way a lawyer can understand
-router.post('/lawyerHelp', async function (req, res, next) {
+openAIRouter.post('/lawyerHelp', async function (req, res, next) {
     var input = req.body.input;
     var response = await openai.createChatCompletion({
         model : model,
@@ -57,11 +61,14 @@ router.post('/lawyerHelp', async function (req, res, next) {
 });
 
 // puts the chatbot in monkey banana mode
-router.post('/monkeyMode', async function (req, res, next) {
+openAIRouter.post('/monkeyMode', async function (req, res, next) {
     var response = await openai.createChatCompletion({
         model : model,
         messages: [{role: "system", content : "You are a helpful chatbot. You only respond in monkey banana mode."}]
     });
     res.send(response.data.choices[0].message);
 });
-module.exports = router;
+
+// rout that takes a 
+
+export default openAIRouter;

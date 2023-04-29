@@ -1,15 +1,22 @@
-var createError = require('http-errors');
-var express = require('express');
-var router = express.Router();
-var path = require('path');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
+import weaviate from 'weaviate-ts-client';
+
+const app = express();
+const router = express.Router();
+
+
 var port = 9000;
 
-var openAIRouter = require('./routes/openAI');
+// routes
+import openAIRouter from './routes/openAI.js';
 
 
-var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
+
+
+app.set('views', path.join(import.meta.url, '..', 'views'));
 app.set('view engine', 'jade');
 
 app.use(express.json());
@@ -19,4 +26,14 @@ const server = app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
     })
 
-module.exports = router;
+/*
+const client = weaviate.client({
+  scheme: 'http',
+  host: 'localhost:8080',  // Replace with your endpoint
+});
+
+const schema = await client.schema.getter().do();
+
+console.log(schema)
+*/
+export default router;
