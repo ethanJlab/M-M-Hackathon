@@ -1,0 +1,42 @@
+Date of Crash Date of Report Invest. Agency Report Number HSMV Crash Report Number
+22/Apr/2021 02:51 AM 22/Apr/2021 02:51 AM 2101198 85863976
+
+Suspected Alcohol Use |Alcohol Tested [Alcohol Test Type Alcohol Test Result |BAC Suspected Drug Use | Drug Tested Drug Test Type Drug Test Result
+1 No 1No
+Source of Transport to Medical Facility EMS Agency Name or ID EMS Run Number Medical Facility Transported To
+1 Not Transported NA
+
+PERSON RECORD
+
+Person#| Description Vehicle# |Name Date of Birth Sex Injury Severity Ejection
+Ejected
+Address City State Zip Code
+Restraint System Air Bag Deployed Helmet Use Eye Protection Seating Location Seat Seating Location Row Seating Location Other
+3 Shoulder and Lap Belt 1 Not Applicable 3 1 1
+Used
+Source of Transport to Medical Facility EMS Agency Name or ID EMS Run Number Medical Facility Transported To
+1 Not Transported NA
+VIOLATIONS
+Person# Name Florida Statute Number | Charge Citation
+i Po 316.074(1) FAIL TO OBEY TRAFFIC CONTROL SIGNAL {FAILED TO ACIGHSE
+STOP AT TRAFF
+NON VEHICLE PROPERTY DAMAGE
+Vehicle#| P erson#| Property Damage - Other Than Vehicle | Est. Amount |Business |Owner's Name Address City & State Zip Code
+1 STOP SIGN 1000 Yes FL DEPT. OF 605 SUWANNEE ST,MS52 TALLAHASSEE FL 32399
+TRANSPORTATION
+NARRATIVE
+
+N-2 WAS HEADING WEST BOUND FROM 64 AVE AND SW 16 ST. V-1 HAD COME TO A STOP ON 65 AVE SW 16 ST FACING NORTH BOUND. V-1 DID NOT ALLOW V-2 THE
+RIGHT OF WAY AND CAUSED A COLLISION IN THE PROCESS. V-1 HAD DAMAGE TO THE RIGHT-SIDE TIRE WHICH WAS DENTED IN COMPLETELY NOT ALLOWING
+THE VEHICLE TO MOVE. V-1 ALSO HAD THE FRONT RIGHT AND REAR DOOR DAMAGED DUE TO THE ACCIDENT. V-2 HAD DAMAGE TO THE FRONT BUMPER & GRILL.
+-2 ALSO HAD THE FRONT GLASS DAMAGED DUE TO IMPACT. ADDITIONALLY, V-1 ALSO RAN OVER A STOP SIGN ON THE SOUTH EAST CORNER OF 65 AVE SW 16
+
+ST.
+ENGINE 40 RESPONDED TO THE SCENE UNDER LT.DIAZ ALARM #90250. ALL INVOLVED PARTIES WERE ATTENDED TO AND CLEARED ON SCENE.
+
+REPORTING OFFICER
+
+ID/Badge # Rank and Name Department Type of Department
+152 PATROL C.LOPEZ WEST MIAMI POLICE DEPARTMENT PD
+
+Page 3 of 4

@@ -5,10 +5,12 @@ module.exports = {
     extend: {
       colors: {
         'BCGPTred': '#E5BA73',
-        'BCGPTyellow': '#C58940' 
+        'BCGPTyellow': '#C58940'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar"),
+  ],
 }
 

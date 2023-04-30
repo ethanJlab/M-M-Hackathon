@@ -1,7 +1,7 @@
 import express from 'express';
 import fs from 'fs';
 export const openAIRouter = express.Router();
-import  * as dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 dotenv.config();
 import { Configuration, OpenAIApi } from 'openai';
 
@@ -17,15 +17,15 @@ const openai = new OpenAIApi(configuration);
 const model = "gpt-3.5-turbo";
 
 // the base enpoint, uses a general prompt 
-openAIRouter.post('/', async function (req, res, next) {    
-    
+openAIRouter.post('/', async function (req, res, next) {
+
     var response = await openai.createChatCompletion({
-        model : model,
-        messages: [{role: "system", content : "You are a helpful chatbot."}]
+        model: model,
+        messages: [{ role: "system", content: "You are a helpful chatbot." }]
     });
-    console.log(process.env)
+    // console.log(process.env)
     res.send(response.data.choices[0].message);
-    
+
 });
 
 // this endpoint uses a prompt that puts the chatbot in monkey banana mode
@@ -34,8 +34,8 @@ openAIRouter.post('/inputPrompt', async function (req, res, next) {
     var prompt = req.body.prompt;
     var input = req.body.input;
     var response = await openai.createChatCompletion({
-        model : model,
-        messages:[{role: "system", content : prompt}, {role: "system", content : input}]
+        model: model,
+        messages: [{ role: "system", content: prompt }, { role: "system", content: input }]
     });
     res.send(response.data.choices[0].message);
 });
@@ -44,8 +44,8 @@ openAIRouter.post('/inputPrompt', async function (req, res, next) {
 openAIRouter.post('/clientHelp', async function (req, res, next) {
     var input = req.body.input;
     var response = await openai.createChatCompletion({
-        model : model,
-        messages: [{role: "system", content : "You are a helpful chatbot. You take legal input documents and summerize it in a way that a client can understand. Be sure to be brief in your reply"}, {role: "system", content : input}]
+        model: model,
+        messages: [{ role: "system", content: "You are a helpful chatbot. You take legal input documents and summerize it in a way that a client can understand. Be sure to be brief in your reply" }, { role: "system", content: input }]
     });
     res.send(response.data.choices[0].message);
 });
@@ -54,8 +54,8 @@ openAIRouter.post('/clientHelp', async function (req, res, next) {
 openAIRouter.post('/lawyerHelp', async function (req, res, next) {
     var input = req.body.input;
     var response = await openai.createChatCompletion({
-        model : model,
-        messages: [{role: "system", content : "You are a helpful chatbot. You take legal input documents and summerize it in a way that a lawyer can understand"}, {role: "system", content : input}]
+        model: model,
+        messages: [{ role: "system", content: "You are a helpful chatbot. You take legal input documents and summerize it in a way that a lawyer can understand" }, { role: "system", content: input }]
     });
     res.send(response.data.choices[0].message);
 });
@@ -63,8 +63,8 @@ openAIRouter.post('/lawyerHelp', async function (req, res, next) {
 // puts the chatbot in monkey banana mode
 openAIRouter.post('/monkeyMode', async function (req, res, next) {
     var response = await openai.createChatCompletion({
-        model : model,
-        messages: [{role: "system", content : "You are a helpful chatbot. You only respond in monkey banana mode."}]
+        model: model,
+        messages: [{ role: "system", content: "You are a helpful chatbot. You only respond in monkey banana mode." }]
     });
     res.send(response.data.choices[0].message);
 });
@@ -73,7 +73,7 @@ openAIRouter.post('/monkeyMode', async function (req, res, next) {
 openAIRouter.post('/audioToText', async function (req, res, next) {
     var audio = req.body.content;
     audio = fs.createReadStream(audio);
-    var response = await openai.createTranscription(audio,"whisper-1");
+    var response = await openai.createTranscription(audio, "whisper-1");
     res.send(response.data.text);
 });
 

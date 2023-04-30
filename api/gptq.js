@@ -3,7 +3,7 @@ import weaviate from "weaviate-ts-client";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-export async function generateRequest(userPrompt,keywords) {
+export async function generateRequest(userPrompt, keywords) {
   var envVariables = process.env;
   const { OPENAIKEY } = envVariables;
 
@@ -13,8 +13,8 @@ export async function generateRequest(userPrompt,keywords) {
     headers: { "X-OpenAI-Api-Key": OPENAIKEY }, // Replace with your inference API key
   });
 
-  
-  
+
+
 
 
   const ret = await client.graphql
@@ -27,12 +27,12 @@ export async function generateRequest(userPrompt,keywords) {
     .withGenerate({
       groupedTask: userPrompt,
     })
-    .withLimit(2)
+    .withLimit(3)
     .do()
     .then((res) => {
       // console.log(JSON.stringify(res))
       const answer = res.data.Get.Document[0]._additional.generate.groupedResult
-      
+
       // console.log(res.data.Get.Document[0]);
 
       return answer;
@@ -41,6 +41,6 @@ export async function generateRequest(userPrompt,keywords) {
       console.error(err);
     });
 
-    console.log(ret);
-    return ret;
+
+  return ret;
 }
