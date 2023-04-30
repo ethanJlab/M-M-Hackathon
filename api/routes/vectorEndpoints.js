@@ -31,7 +31,7 @@ var baseUrl = "http://localhost:8080";
 vectorRouter.post('/create', async function (req, res, next) {
     var createEndpoint = baseUrl + "/v1/objects/";
     let data = req.body;
-    // console.log(data);
+     console.log(data);
 
     fetch(createEndpoint, {
         method: 'POST',

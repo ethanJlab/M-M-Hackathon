@@ -8,14 +8,25 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { FancyButton } from "./utils/FancyButton";
-
-const fileTypes = ["JPG", "PNG", "GIF"];
+//import FileReader from 'filereader';
+const fileTypes = ["JPG", "PNG", "GIF","txt","PDF"];
 
 export function FileUpload() {
   const [file, setFile] = useState(null);
 
-  const handleChange = (file) => {
+  const handleChange = async (file) => {
     setFile(file);
+    console.log(await file.text());
+    await fetch('http://localhost:9000/vector/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          "content": await file.text()
+        })
+      })
   };
 
   useEffect(() => {
