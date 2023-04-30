@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button, TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import Grid from '@mui/material/Grid';
 
 export function Chat()
 {
@@ -55,30 +56,46 @@ export function Chat()
     }, [sendTextBubbles]);
 
     return (
-        <div className='w-3/4 h-96 bg-gradient-to-b from-BCGPTred to-BCGPTyellow content-end rounded'>
-            {recieveTextBubbles}
+        // <div className='w-full h-96 grid grid-rows-2 content-end'>
+        <Grid
+        container
+        direction="column"
+        justifyContent="flex-end"
+        alignItems="center"
+        style={{ position: 'fixed', bottom: '0', width: '75%', paddingRight:"8px", paddingLeft:"8px", paddingBottom:"8px" }}
+        >
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} style={{width:"100%",  maxHeight:"83vh", overflowY:"scroll"}}>
+                {recieveTextBubbles}
+            </Grid>
 
-            <div className="flex justify-center content-center w-full h-12 rounded-lg bg-white">
-            
-                <TextField placeholder="Ask a question about the case!" value={text} className='w-full' onChange={(e) => setText(e.target.value)}
-                    onKeyDown={(event) => {
-                        if (event.key === "Enter") {
-                          handleTextSubmit(event);
-                        }
-                      }}
-                      
-                    InputProps={{
-                        endAdornment: (
-                            <Button onClick={handleTextSubmit}>
-                                <SendIcon/>
-                            </Button>
-                        ),
-                    }}>
-                    
-                </TextField>
+            {/* <div className='flex justify-center content-center'>
+            //     <div className="w-11/12 h-12 rounded-lg bg-white"> */}
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} style={{width:"100%"}}>
+
+          
+            <TextField placeholder="Ask a question about the case!" value={text} className='w-full' onChange={(e) => setText(e.target.value)}
+                onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                    handleTextSubmit(event);
+                    }
+                }}
                 
-            </div>
-        </div>
+                InputProps={{
+                    endAdornment: (
+                        <Button onClick={handleTextSubmit}>
+                            <SendIcon/>
+                        </Button>
+                    ),
+                }}>
+                
+            </TextField>
+            </Grid>
+                
+        {/* //         </div> */}
+        {/* //     </div> */}
+            
+        {/* // </div> */}
+        </Grid>
     );
 }
 

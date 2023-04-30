@@ -25,7 +25,11 @@ function App() {
 
 
   return (
-    <div className="App" style={{height: '100vh', backgroundColor: '#FFF2CC'}}>
+    <div className="App bg-gradient-to-b from-black to-gray-300" style={{height: '100vh',}}>
+    {/* <HeaderBar/> */}
+    <div className='w-full h-10 bg-black flex justify-center text-center pb-14'>
+      <span className='font-mono text-xl mt-3 text-yellow-400'>Better Call GPT</span>
+    </div>
     <Grid container   
               direction="row"
               justifyContent="flex-start"

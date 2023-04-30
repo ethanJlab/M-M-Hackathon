@@ -36,8 +36,8 @@ export function VoiceRecordDialog() {
         <DialogContent>
           <DialogContentText id="alert-dialog-description" style={{textAlign:"center"}}>
               <Button style={{height:"100px", width:"100px"}}>
-                {/* <MicIcon style={{height:"100px", width:"100px"}}/> */}
-                <StopIcon style={{height:"100px", width:"100px"}}/> 
+                <MicIcon style={{height:"100px", width:"100px"}}/>
+                {/* <StopIcon style={{height:"100px", width:"100px"}}/>  */}
               </Button>
           </DialogContentText>
         </DialogContent>

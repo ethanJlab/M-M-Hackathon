@@ -23,7 +23,7 @@ export function FileUpload() {
   }, [file])
   
   return (
-    <div className="bg-gradient-to-t from-gray-200" style={{
+    <div className="bg-gray-200" style={{
         // display: 'flex',
         // justifyContent: 'center',
         // alignItems: 'center',
