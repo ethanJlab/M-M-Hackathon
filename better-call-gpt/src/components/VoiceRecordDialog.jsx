@@ -25,9 +25,6 @@ export function VoiceRecordDialog() {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open alert dialog
-      </Button>
       <Dialog
         open={open}
         onClose={handleClose}
