@@ -27,7 +27,7 @@ export function CaseList(props) {
     useEffect(() => {
         let tempCaseItems = [];
         if (Array.isArray(props.cases)) {
-            props.cases.forEach((caseItem) => {
+            props.cases.forEach((caseItem, caseIdx) => {
                 tempCaseItems.push(
                     <>
                         <ListItem disablePadding>
@@ -35,7 +35,7 @@ export function CaseList(props) {
                                 <ListItemIcon >
                                     {caseItem % 2 === 0 ? <DescriptionIcon className='text-yellow-400' /> : <PictureAsPdfIcon className='text-yellow-400' />}
                                 </ListItemIcon>
-                                <ListItemText primary="Inbox" className='text-yellow-400' />
+                                <ListItemText className='text-yellow-400' >Case File {caseIdx}</ListItemText>
                             </ListItemButton>
                         </ListItem >
                         <Divider />
