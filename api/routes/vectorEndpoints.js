@@ -82,7 +82,7 @@ vectorRouter.post('/query', async function (req, res, next) {
     //    const personality = "Saul goodman";
 
        
-       const userAnswer = await generateRequest(parsedResponse,keywords)
+       const userAnswer = await generateRequest(parsedResponse,parsedKeywords)
 
        if(userAnswer == null){
             res.send("No relevant answer found, please add more relevant data.");
