@@ -60,7 +60,7 @@ export function Chat() {
             alignItems="center"
             style={{ position: 'fixed', bottom: '0', width: '75%', paddingRight: "8px", paddingLeft: "8px", paddingBottom: "8px" }}
         >
-            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} style={{ width: "100%", maxHeight: "83vh", overflowY: "scroll" }}>
+            <Grid className='scrollbar-thin scrollbar-track-zinc-900' item xl={12} lg={12} md={12} sm={12} xs={12} style={{ width: "100%", maxHeight: "83vh", overflowY: "scroll" }}>
                 {recieveTextBubbles}
             </Grid>
 
