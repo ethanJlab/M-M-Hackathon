@@ -1,10 +1,9 @@
 import express from 'express';
+import fs from 'fs';
 export const openAIRouter = express.Router();
-import dotenv from 'dotenv';
+import  * as dotenv from 'dotenv';
 dotenv.config();
 import { Configuration, OpenAIApi } from 'openai';
-
-
 
 var envVariables = process.env;
 const {
@@ -12,7 +11,7 @@ const {
 } = envVariables;
 
 const configuration = new Configuration({
-    apiKey: "",
+    apiKey: OPENAIKEY,
 });
 const openai = new OpenAIApi(configuration);
 const model = "gpt-3.5-turbo";
@@ -24,6 +23,7 @@ openAIRouter.post('/', async function (req, res, next) {
         model : model,
         messages: [{role: "system", content : "You are a helpful chatbot."}]
     });
+    console.log(process.env)
     res.send(response.data.choices[0].message);
     
 });
@@ -35,7 +35,7 @@ openAIRouter.post('/inputPrompt', async function (req, res, next) {
     var input = req.body.input;
     var response = await openai.createChatCompletion({
         model : model,
-        messages:[{role: "system", content : prompt}, {role: "user", content : "Hello, how are you?"}]
+        messages:[{role: "system", content : prompt}, {role: "system", content : input}]
     });
     res.send(response.data.choices[0].message);
 });
@@ -67,6 +67,14 @@ openAIRouter.post('/monkeyMode', async function (req, res, next) {
         messages: [{role: "system", content : "You are a helpful chatbot. You only respond in monkey banana mode."}]
     });
     res.send(response.data.choices[0].message);
+});
+
+//this enpoint takes in an audio file and outputs a text
+openAIRouter.post('/audioToText', async function (req, res, next) {
+    var audio = req.body.content;
+    audio = fs.createReadStream(audio);
+    var response = await openai.createTranscription(audio,"whisper-1");
+    res.send(response.data.text);
 });
 
 // rout that takes a 
