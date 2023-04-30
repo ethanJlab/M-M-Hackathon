@@ -31,22 +31,31 @@ var baseUrl = "http://localhost:8080";
 vectorRouter.post('/create', async function (req, res, next) {
     var createEndpoint = baseUrl + "/v1/objects/";
     let data = req.body;
-     console.log(data);
+     console.log(data.content);
 
-    fetch(createEndpoint, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'X-Openai-Api-Key': OPENAIKEY
-        },
-        body: JSON.stringify(data)
-    })
-        .then(response => response.json())
-        .then(data => {
-            // console.log('Success:', data);
-            res.send(data);
-        })
+     await client.data.creator()
+     .withClassName("Document")
+     .withProperties({
+         content: data.content.toString(),
+     })
+     .do();
+     console.log("FInisehd uploading!");
+    // fetch(createEndpoint, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Accept': 'application/json',
+    //         'X-Openai-Api-Key': OPENAIKEY
+    //     },
+    //     body: JSON.stringify(data)
+    // })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         // console.log('Success:', data);
+    //         res.send(data);
+    //     })
+
+    res.send("Success :)");
 });
 
 // endpoint to get query a vector
