@@ -1,0 +1,60 @@
+@ LexisNexis’
+
+PAGE COUNT: 5
+
+CLIENT : 8811
+
+DIVISION :
+
+ADJUSTER : 0053COOO000BSLLQ
+CLAIM : 00002410
+TRANSACTION # : 1348431222
+DATE : 05/03/2021
+DATE OF LOSS : 04/22/2021 TIME OF LOSS :
+STREET : SW 65 AVE
+CITY :
+
+COUNTY : DADE
+STATE : FL
+
+INVESTIGATING AGENCY :
+REPORT NUMBER :
+REPORT TYPE :
+
+PARTY 1:
+
+PARTY 2:
+
+PARTY 3:
+
+CAR :
+DRIVER LICENSE :
+ADDITIONAL INFO :
+
+NOTE :
+
+WEST MIAMI PD
+85863976
+Auto Accident
+
+MAKE :
+TAG :
+
+YEAR :
+
+THANK YOU FOR YOUR ORDER!
+
+For Customer Support refer to the
+appropriate platform below:
+
+OrderPoint
+800-934-9698
+Orderpoint.support@lexisnexis.com
+
+Accurint for Insurance
+866-277-8407
+Accurint.support@lexisnexis.com
+
+Lexis.com
+Law Firm accounts
+800-543-6862
