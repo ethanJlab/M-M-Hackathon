@@ -1,0 +1,79 @@
+FLORIDA TRAFFIC CRASH REPORT HIGHWAY SAFETY & MOTOR VEHICLES,
+LONG FORM FX] SHORT FORM UPDATE TRAFFIC CRASH RECORDS
+NEIL KIRKMAN BUILDING, TALLAHASSEE, FL 32399-0537
+
+(Electronic Version)
+
+Date of Crash Time of Crash Date of Report Invest. Agency Report Number HSMV Crash Report Number
+22/Apr/2021 02:51 AM | 22/Apr/2021 02:51 AM | 22/Apr/2021 12:00 AM 2101198 85863976
+
+CRASH IDENTIFIERS
+
+County Code City Code County of Crash Place or City of Crash Within City Limits Time Reported /Time Dispatched
+01 93 MIAMI-DADE WEST MIAMI Yes 22/Apr/2021 22/Apr/2021
+02:51 PM 02:51 PM
+Time on Scene |Time Cleared Scene |Completed |Reason (if Investigation NOT Completed) Notified By
+22/Apri2021 22/Apr/2021 04:00 Yes Law Enforcement
+02:54 PM PM
+
+ROADWAY INFORMATION
+
+Crash Occured On Street, Road, Highway @ At Street Address# @ At Lattitude and Longitude
+SW 65TH AVE 25.75596 -80.301739
+At Feet Or Miles Direction @F rom Intersection With Street, Road, Highway Q Or From Milepost #
+West SW 16TH ST 225
+Road System Identifier Type Of Shoulder Type Of Intersection
+5 Local 1 Paved 2 Four-Way Intersection
+CRASH INFORMATION (Check if Pictures Taken)
+light Condition Weather Condition Roadway Surface Condition |School Bus Related Manner Of Collision
+1 Daylight 1 Clear 1 Dry 1 No 2 Front to Front
+First Harmful Event Type First Harmful Event First Harmful Event Location Within Interchange First Harmful Event Relation to J unction
+14 1 On Roadway No 18 Through Roadway
+Contributing Circumstances: Road Contributing Circumstances: Road Contributing Circumstances: Road
+1 None
+Contributing Circumstances: Environment Contributing Circumstances: Environment Contributing Circumstances: Environment
+None
+Work Zone Related =| Crash In Work Zone Type Of Work Zone Workers In Work Zone Law Enforcement In Work Zone
+1 No
+VEHICLE (Check if Commercial)
+Vehicle |Motor Vehicle Type Hit and Run Veh License Number State Reg. Expires Permanent Reg. |VIN
+1 1 Vehicle in Transport 1No GWSQ92 FL 2T3K1RFV6LW059180
+Year Make Model Style Color Extent of Damage Est. Damage Towed Due To Damage _ |Vehicle Removed By Rotation
+2020 | TOYT 4D WHI Disabling 5000 Yes WHITE Owner Request
+Insurance Company Insurance Policy Number
+INFINITY AUTO INSURANCE COMPANY 109901108885001
+Name of Vehicle Owner (Check Box If Business) Current Address (Number and Street) City and State Zip Code
+MIAMI FL 33165
+Taller License Number State Reg. Expires /Permanent Reg. |VIN Year Make Length Axles
+ne:
+Trailer License Number State Reg. Expires /Permanent Reg. |VIN Year Make Length Axles
+wo:
+Vehicle Direction On Street, Road, Highway AtEst. Speed |Posted Speed  |Total Lanes
+Traveling: North SW 16 ST 10 25 2
+CMV Configuration Cargo Body Type Area of Initial Impact Most Damaged Area
+- : : : 2[sl4lsls6]7 ; 2131@ sle]7 ;
+Comm GVWR/GCWR Trailer Type (trailer one) Trailer Type (trailer two) 18. Undercarriage | 18. Undercarriage
+4 Not Applicable 7 (( a7 |[ 9 19. Overturn 4 (( 47 || 9 19. Overtum
+2 20. Windshield | 20. Windshield
+Haz. Mat. Release |Haz Mat. Placard Number Class 14/13] 12] 11] 10] 9> 21. Trailer 14/43] 12] 11] 40] 89> 21. Trailer
+Motor Carrier Name US DOT Number
+Motor Carrier Address City and State Zip Code Phone Number
+Comm/Non-Commercial |Vehicle Body Type Vehicle Defects (one) Vehicle Defects (two) Emergency Vehicle Use /Speciual Function of MV
+1 Passenger Car 1 None 1No 1 No Special Function
+Vehicle Maneuver Action |Trafficway a Roadway Grade Roadway Alignment Most Harmful Event Most Harmful Event Detail
+1 Straight Ahead 1 Two-Way, Not Divided 1 Level 1 Straight 2 Collision yith Non-Fixed | 14 Motor Vehicle in Transport
+ject
+Traffic Control Device For This Vehicle | First (1) Sequence of Events Second (2) Sequence of Events | Third (3) Sequence of Events Fourth (4) Sequence of Events
+1 No Controls 2 Collision with Non-Fixed
+Object
+14 Motor Vehicle in Transport
+VEHICLE (Check if Commercial)
+Vehicle |Motor Vehicle Type Hit and Run Veh License Number State Reg. Expires Permanent Reg. |VIN
+Year Make Model Style Color Extent of Damage Est. Damage Towed Due To Damage _ |Vehicle Removed By Rotation
+2021 | VOLK 4D WHI Minor No WHITE
+
+Insurance Company Insurance Policy Number
+STATE FARM AUTO INSURANCE Po
+
+HSMV 90010 S Page 1 of 4
+

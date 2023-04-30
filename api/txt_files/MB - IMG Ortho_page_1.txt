@@ -1,0 +1,21 @@
+Patient Transaction and Case Manager Custom Report
+
+Winter Park-Integrity Medical Group
+Date Range: Jan 1, 2018-Dec 13, 2021
+
+Transaction Type: Associated Filter Charge By: Service Date
+Provider: All
+Patient Name = Patient Acct = Claim Rendering Provider Service Transaction Patient MVA Case Date of Charges By CPT Billed Ins Patient Contractual Ins Refund WriteOff Balance
+No 1D) Name Date Date DOB Name Injury Charge Payment Payment Withheld Adj
+| P| 66326 | PHILLIPS, JACOB E Aug 25, Aug 30, 2021 Mm 04/22/2021 MVA_ 04/22/2021 99293 $0.00 $434.48 $0.00 $0.00 $0.00 $0.00 $0.00 $0.00 $434.48
+rd 2021 99203 $434.48
+az PHILLIPS, JACOB E Aug 25, Oct 25, 2021 Ma 04/22/2021 MVA 04/22/2021 99703 $0.00 $0.00 $153.42 $0.00 $242.70 $0.00 $0.00 $0.00 ($396.12)
+2021 99203 | $434.48
+7 | $434.48 $153.42 $0.00 $242.70 $0.00 $0.00 $0.00 $38.36
+
+$434.48 $153.42 $0.00 $242.70 $0.00 $0.00 $0.00 $38.36
+| $434.48 $153.42 $0.00 $242.70 $0.00 $0.00 $0.00 $38.36
+
+Summa
+
+Dec 13, 2021 -1- 4:34:07 PM
