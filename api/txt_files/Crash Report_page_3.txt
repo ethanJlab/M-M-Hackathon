@@ -1,0 +1,81 @@
+Date of Crash Date of Report Invest. Agency Report Number HSMV Crash Report Number
+22/Apr/2021 02:51 AM 22/Apr/2021 02:51 AM 2101198 85863976
+
+Name of Vebi iness) Current Address (Number and Street) City and State Zip Code
+a EUSTIS FL 32726
+
+Taller License Number State Reg. Expires /Permanent Reg. |VIN Year Make Length Axles
+ne:
+Trailer License Number State Reg. Expires /Permanent Reg. |VIN Year Make Length Axles
+wo:
+Vehicle Direction On Street, Road, Highway AtEst. Speed |Posted Speed Total Lanes
+Traveling: West SW 16 ST 25 25 2
+CMV Configuration Cargo Body Type Area of Initial Impact Most Damaged Area
+Comm GVWR/GCWR Trailer Type (trailer one) Trailer Type (trailer two) 7-18. Undercarriage - 18. Undercarriage
+4 Not Applicable 8 19. Overturn 1 a 19, Overturn
+a 20. Windshield | 20. Windshield
+Haz. Mat. Release /|Haz Mat. Placard Number Class 14[ 43] 12[ 41] 10] 9> 21. Trailer 14[43[ 12] 11[ 10] 9° 21. Trailer
+Motor Carrier Name US DOT Number
+Motor Carrier Address City and State Zip Code Phone Number
+Comm/Non-Commercial |Vehicle Body Type Vehicle Defects (one) Vehicle Defects (two) Emergency Vehicle Use /Speciual Function of MV
+1 Passenger Car 1 None 1No 1 No Special Function
+Vehicle Maneuver Action |Trafficway a Roadway Grade Roadway Alignment Most Harmful Event Most Harmful Event Detail
+1 Straight Ahead 1 Two-Way, Not Divided 1 Level 1 Straight 2 Collision with Non-Fixed | 14 Motor Vehicle in Transport
+ject
+Traffic Control Device For This Vehicle | First (1) Sequence of Events Second (2) Sequence of Events | Third (3) Sequence of Events Fourth (4) Sequence of Events
+1 No Controls 2 Collision with Non-Fixed
+Object
+14 Motor Vehicle in Transport
+PERSON RECORD
+Person#| Description Vehicle # Name Date of Birth Sex Phone Number Re-Exam
+1 1 Driver 1 | Mfr Et
+Address City State Zip Code
+MIAMI FL 33165
+Driver Li State Expires DL Type Req. End. Injury Severity Ejection
+FL a 5 E/Operator 3 No Req 1 None 1 Not Ejected
+Endorsement
+Restraint System Air Bag Deployed Helmet Use Eye Protection Seating Location Seat Seating Location Row Seating Location Other
+3 Shoulder and Lap Belt 1 Not Applicable 1 Left 1 Front
+Used
+Drivers Actions at Time of Crash (first) Drivers Actions at Time of Crash (second) Driver Distracted By Vision Obstruction
+1 No Contributing Action 1 No Contributing Action 1 Not Distracted 1 Vision Not Obscured
+Drivers Actions at Time of Crash (third) Drivers Actions at Time of Crash (fourth) Drivers Condition at Time of Crash
+1 No Contributing Action 13 Ran Stop Sign 1 Apparently Normal
+Suspected Alcohol Use |Alcohol Tested [Alcohol Test Type Alcohol Test Result |BAC Suspected Drug Use | Drug Tested Drug Test Type Drug Test Result
+1 No 1No
+Source of Transport to Medical Facility EMS Agency Name or ID EMS Run Number Medical Facility Transported To
+1 Not Transported NA
+
+PERSON RECORD
+
+Person#| Description Vehicle# §(N Date of Birth Sex Injury Severity Ejection
+Ejected
+
+Address City State Zip Code
+
+Restraint System Air Bag Deployed Helmet Use Eye Protection Seating Location Seat Seating Location Row Seating Location Other
+
+3 Shoulder and Lap Belt 3 Deployed-Front 3 1 1
+
+Used
+Source of Transport to Medical Facility EMS Agency Name or ID EMS Run Number Medical Facility Transported To
+1 Not Transported NA
+
+PERSON RECORD
+
+Person#| Description Vehicle # Name i Sex Phone Number Re-Exam
+2 1 Driver 2 PE 2Female | ay No
+Addres City State Zip Code
+
+Driver License Number State Expires DL Type Req. End. Injury Severity Ejection
+fF FL a 5 E/Operator 3 No Req 1 None 1 Not Ejected
+
+Endorsement
+Restraint System Air Bag Deployed Helmet Use Eye Protection Seating Location Seat Seating Location Row Seating Location Other
+3 Right 1 Front 1 Not Applicable
+Drivers Actions at Time of Crash (first) Drivers Actions at Time of Crash (second) Driver Distracted By Vision Obstruction
+1 No Contributing Action 1 Not Distracted 1 Vision Not Obscured
+Drivers Actions at Time of Crash (third) Drivers Actions at Time of Crash (fourth) Drivers Condition at Time of Crash
+1 Apparently Normal
+
+Page 2 of 4

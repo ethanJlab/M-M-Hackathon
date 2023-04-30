@@ -15,30 +15,30 @@ import StarBorder from '@mui/icons-material/StarBorder';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
-export function CaseList( props ) {
-    const [caseItems, setCaseItems] = useState([]);
-      const [open, setOpen] = React.useState(true);
 
-  const handleClick = () => {
-    setOpen(!open);
-  };
+export function CaseList(props) {
+    const [caseItems, setCaseItems] = useState([]);
+    const [open, setOpen] = React.useState(true);
+
+    const handleClick = () => {
+        setOpen(!open);
+    };
 
     useEffect(() => {
         let tempCaseItems = [];
-        if(Array.isArray(props.cases) )
-        {
+        if (Array.isArray(props.cases)) {
             props.cases.forEach((caseItem) => {
                 tempCaseItems.push(
-                    <> 
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {caseItem % 2 == 0 ? <DescriptionIcon /> : <PictureAsPdfIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary="Inbox" />
-                        </ListItemButton>
-                    </ListItem>
-                    <Divider />
+                    <>
+                        <ListItem disablePadding>
+                            <ListItemButton >
+                                <ListItemIcon >
+                                    {caseItem % 2 === 0 ? <DescriptionIcon className='text-yellow-400' /> : <PictureAsPdfIcon className='text-yellow-400' />}
+                                </ListItemIcon>
+                                <ListItemText primary="Inbox" className='text-yellow-400' />
+                            </ListItemButton>
+                        </ListItem >
+                        <Divider />
                     </>
                 )
             })
@@ -46,12 +46,12 @@ export function CaseList( props ) {
         setCaseItems(tempCaseItems);
     }, [props.cases])
 
-  return (
-    <Paper  sx={{ width: "100%", height:"100%", maxHeight:"80vh", overflow: 'auto'}}>
-        <List className='bg-gray-200'>
-            {caseItems}
+    return (
+        <Paper className='scrollbar-thin scrollbar-thumb-zinc-900 scrollbar-track-zinc-800' sx={{ width: "100%", height: "100%", maxHeight: "80vh", overflow: 'auto' }}>
+            <List className='bg-zinc-800'>
+                {caseItems}
 
-            {/* TODO: use below when files are mapped to a case
+                {/* TODO: use below when files are mapped to a case
             <ListItemButton onClick={handleClick}>
                 <ListItemIcon>
                     <DescriptionIcon />
@@ -69,7 +69,9 @@ export function CaseList( props ) {
                 </ListItemButton>
                 </List>
             </Collapse> */}
-        </List>
-    </Paper>
-  );
+            </List>
+        </Paper>
+
+
+    );
 }
