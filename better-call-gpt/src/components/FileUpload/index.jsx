@@ -20,6 +20,8 @@ export function FileUpload() {
 
   useEffect(() => {
     // TODO: call endpoint to upload file here
+    console.log("showing file");
+    console.log(file);
   }, [file])
 
   return (
