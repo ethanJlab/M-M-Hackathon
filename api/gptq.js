@@ -27,7 +27,7 @@ export async function generateRequest(userPrompt,keywords) {
     .withGenerate({
       groupedTask: userPrompt,
     })
-    .withLimit(2)
+    .withLimit(3)
     .do()
     .then((res) => {
       // console.log(JSON.stringify(res))
@@ -41,6 +41,6 @@ export async function generateRequest(userPrompt,keywords) {
       console.error(err);
     });
 
-    console.log(ret);
+    
     return ret;
 }
